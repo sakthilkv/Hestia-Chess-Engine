@@ -253,6 +253,31 @@ U64 generateRookAttacksWithBlockage(int square, U64 blockage)
 }
 
 
+U64 set_occupancy(int idx, int bits_in_mask, U64 mask_attack)
+{
+	U64 occupancy  = 0ULL;
+
+	for (int count = 0; count < bits_in_mask; count++)
+	{
+		int square = get_lsbidx(attack_mask);
+
+		pop_countbit(mask_attack, square);
+
+		if (idx & (1 << count))
+			occupancy |= (1ULL << square);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 void initLeapersAttacks()
 {
 	for (int square = 0; square < 64; square++)
@@ -274,9 +299,11 @@ int main(){
 	//g++ -o move move.cpp chessboard.cpp -I"C:/SFML/include" -L"C:/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
 	//initLeapersAttacks();
 
-	U64 blockage = 0ULL;
-	
-	int piece_pos = c7;
-    displayChessboard(blockage, generateKnightAttacks(piece_pos),piece_pos);
+	for (int idx = 0; idx < 4096; idx++)
+	{
+		
+	}
+	//int piece_pos = c7;
+    //displayChessboard(blockage, generateKnightAttacks(piece_pos),piece_pos);
 	return 0;
 }
