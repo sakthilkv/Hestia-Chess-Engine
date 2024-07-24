@@ -7,8 +7,7 @@ using namespace std;
 U64 pawnAttackTable[2][64];
 U64 knightAttackTable[64];
 U64 kingAttackTable[64];
-U64 rookAttackTable[64][4096];
-U64 bishopAttackTable[64][512];
+
 
 U64 generatePawnAttacks(int side, int square)
 {
@@ -131,16 +130,3 @@ void initLeapersAttacks()
 
 
 
-
-int main(){
-	//g++ move.cpp -o move && move.exe
-	//g++ -o move move.cpp chessboard.cpp -I"C:/SFML/include" -L"C:/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
-	//initLeapersAttacks();
-
-	init_magic_numbers();
-
-
-	//int piece_pos = c7;
-    //displayChessboard(blockage, generateKnightAttacks(piece_pos),piece_pos);
-	return 0;
-}
