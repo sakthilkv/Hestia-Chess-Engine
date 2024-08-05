@@ -4,6 +4,8 @@
 
 Hestia is a high-performance chess engine written in C++, designed to be both powerful and efficient. Named after the Greek goddess of hearth and home, Hestia aims to bring warmth and intelligence to the game of chess through advanced algorithms and a robust architecture. The project is currently under development and is a long-term endeavor, with continuous improvements and optimizations planned over the years.
 
+Work in progress...
+
 ## Features
 
 - **Bitboard Representation:** Utilizes bitboards for efficient board representation and manipulation.
